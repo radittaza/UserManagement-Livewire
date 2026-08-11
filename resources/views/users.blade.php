@@ -15,7 +15,6 @@
 
 <body>
     @livewire('users')
-    <livewire:counter />
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    redirect('/counter');
+    return redirect('/users');
 });
 
 use App\Livewire\Counter;
