@@ -1,5 +1,4 @@
-<div class="flex justify-center gap-10">
-    <div class="w-1/3 my-10">
+    <div class="w-1/4 my-10">
         <div class="py-2">
             <div class="mx-auto">
                 {{-- <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"
@@ -118,31 +117,3 @@
             </div>
         </div>
     </div>
-
-    <div class="w-1/3 my-10">
-        <div class="mx-auto mb-4">
-            {{-- <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"
-                class="mx-auto h-10 w-auto" /> --}}
-            <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Users List</h2>
-        </div>
-        <ul role="list" class="divide-y divide-gray-100">
-            @foreach ($users as $user)
-                <li class="flex justify-between gap-x-6 py-5">
-                    <div class="flex min-w-0 gap-x-4">
-                        <img src="{{ $user->avatar ?? asset('img/avatar_default.jpg') }}"
-                            alt="" class="size-12 flex-none rounded-full bg-gray-50" />
-                        <div class="min-w-0 flex-auto">
-                            <p class="text-sm/6 font-semibold text-gray-900">{{ $user->name }}</p>
-                            <p class="mt-1 truncate text-xs/5 text-gray-500">{{ $user->email }}</p>
-                        </div>
-                    </div>
-                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end self-center">
-                        <p class="mt-1 text-xs/5 text-gray-500">Join {{ $user->created_at->diffForHumans() }}</time>
-                        </p>
-                    </div>
-                </li>
-            @endforeach
-        </ul>
-        {{ $users->links() }}
-    </div>
-</div>
